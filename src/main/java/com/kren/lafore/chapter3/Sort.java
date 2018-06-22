@@ -47,6 +47,30 @@ public class Sort {
 	return sortedArray;
     }
 
+    public static int[] insertSort(int[] array) {
+
+	int[] sortedArray = array.clone();
+
+	for (int i = 1; i < sortedArray.length; i++) {
+	    int temp = sortedArray[i];
+	    int emptyIndex = i;
+
+	    for (int j = i - 1; j >= 0; j--) {
+
+		if (temp > sortedArray[j]) {
+		    sortedArray[emptyIndex] = temp;
+		    break;
+		} else {
+		    switchElements(sortedArray, j, emptyIndex);
+		    emptyIndex--;
+		    sortedArray[emptyIndex] = temp;
+		}
+	    }
+	}
+
+	return sortedArray;
+    }
+
     private static void switchElements(int[] array, int firstIndex, int secondIndex) {
 	int firstValue = array[firstIndex];
 	array[firstIndex] = array[secondIndex];
