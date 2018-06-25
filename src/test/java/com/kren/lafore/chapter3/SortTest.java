@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class SortTest {
 
     // private static final int[] array = { 7, 9, 8, 5, 6, 2 };
-    private static final int[] array = new Random().ints(1000000, -1000000, 1000000)
+    private static final int[] array = new Random().ints(100000, -1000000, 1000000)
                                                    .toArray();
 
     private static final int[] sortedArray;
